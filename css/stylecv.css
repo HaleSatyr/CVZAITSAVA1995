@@ -1,0 +1,217 @@
+:root {
+            --primary-bg: #f8f4f0;
+            --secondary-bg: #e8e4e0;
+            --accent: #d4c9c0;
+            --text: #5a4a42;
+            --border: #d8cfc7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .cv-container {
+            width: 100%;
+            max-width: 1100px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        header {
+            background-color: var(--secondary-bg);
+            padding: 30px 40px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 400px;
+            height: 500px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 10px solid var(--border);
+        }
+
+        .personal-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .personal-info h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            color: var(--text);
+        }
+
+        .personal-info p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+
+        main {
+            padding: 30px 40px;
+        }
+
+        /* Grid 2x2 for core sections */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        section {
+            background-color: var(--secondary-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            padding: 25px;
+        }
+
+        /* ✅ Заголовки выделены акцентным цветом */
+        section h2 {
+            font-size: 1.35rem;
+            margin: -25px -25px 20px -25px; /* компенсируем padding секции для full-width заголовка */
+            padding: 14px 25px;
+            background-color: var(--accent);
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--border);
+        }
+
+        .experience-item:last-child,
+        .education-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .job-title, .degree {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text);
+        }
+
+        .company, .institution {
+            font-weight: 500;
+            color: var(--text);
+            margin: 4px 0;
+        }
+
+        .date {
+            font-style: italic;
+            color: #777;
+            font-size: 0.875rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            border-bottom: 3px solid var(--border);
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        .skills-list:last-child,
+        .skills-list:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .skill-tag {
+            background-color: var(--accent);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+
+        .qualities-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            border-bottom: 3px solid var(--border);
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        .qualities-list:last-child,
+        .qualities-list:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .qualities-list li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            background-color: var(--secondary-bg);
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive: stack on mobile */
+        @media (max-width: 768px) {
+            header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-photo {
+                margin: 0 auto;
+            }
+
+            .personal-info {
+                text-align: center;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            section {
+                padding: 25px 20px;
+            }
+
+            section h2 {
+                margin: -25px -20px 20px -20px;
+                padding: 14px 20px;
+            }
+        }
