@@ -70,7 +70,7 @@
             padding: 30px 40px;
         }
 
-        /* Grid 2x2 for core sections */
+        
         .content-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -84,10 +84,10 @@
             padding: 25px;
         }
 
-        /* ✅ Заголовки выделены акцентным цветом */
+        
         section h2 {
             font-size: 1.35rem;
-            margin: -25px -25px 20px -25px; /* компенсируем padding секции для full-width заголовка */
+            margin: -25px -25px 20px -25px; 
             padding: 14px 25px;
             background-color: var(--accent);
             color: var(--text);
@@ -183,7 +183,7 @@
             text-decoration: underline;
         }
 
-        /* Responsive: stack on mobile */
+        
         @media (max-width: 768px) {
             header {
                 grid-template-columns: 1fr;
@@ -214,4 +214,5 @@
                 margin: -25px -20px 20px -20px;
                 padding: 14px 20px;
             }
+
         }
